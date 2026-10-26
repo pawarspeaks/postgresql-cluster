@@ -8,8 +8,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
-      - ./postgresql-1/config/postgresql.conf:/usr/share/postgresql/postgresql.conf.sample
-      - ./postgresql-1/config/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - ./postgres-1/config/postgresql.conf:/usr/share/postgresql/postgresql.conf.sample
+      - ./postgres-1/config/pg_hba.conf:/etc/postgresql/pg_hba.conf
       - pgdata1:/var/lib/postgresql/data
     ports:
       - "5432:5432"
@@ -24,8 +24,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
-      - ./postgresql-2/config/postgresql.conf:/usr/share/postgresql/postgresql.conf.sample
-      - ./postgresql-2/config/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - ./postgres-2/config/postgresql.conf:/usr/share/postgresql/postgresql.conf.sample
+      - ./postgres-2/config/pg_hba.conf:/etc/postgresql/pg_hba.conf
       - pgdata2:/var/lib/postgresql/data
     ports:
       - "5433:5432"
