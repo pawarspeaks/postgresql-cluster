@@ -20,6 +20,8 @@ services:
   postgresql-2:
     image: postgres:13
     container_name: postgresql-2
+    depends_on:
+      - postgresql-1
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
